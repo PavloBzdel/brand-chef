@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="container header__container">
+    <div class="logo">
+      <span class="logo__name">Павло Бздель</span>
+      <span class="logo__title">БРЕНД-ШЕФ</span>
+    </div>
+
+    <button class="burger" (click)="toggleMenu()" [class.open]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" [class.open]="isMenuOpen">
+      <ul class="nav__list">
+        <li><a href="#main" class="nav__link" (click)="closeMenu()">ГОЛОВНА</a></li>
+        <li><a href="#about" class="nav__link" (click)="closeMenu()">ПРО МЕНЕ</a></li>
+        <li><a href="#consulting" class="nav__link" (click)="closeMenu()">КОНСАЛТИНГ</a></li>
+        <li><a href="#projects" class="nav__link" (click)="closeMenu()">ПРОЄКТИ</a></li>
+        <li><a href="#gallery" class="nav__link" (click)="closeMenu()">ГАЛЕРЕЯ</a></li>
+        <li><a href="#contact" class="nav__link" (click)="closeMenu()">КОНТАКТИ</a></li>
+      </ul>
+
+      <div class="mobile-actions">
+        <a href="https://drive.google.com/file/d/1mZ_JkRBVdnpXnmz2c5mp4gutyHi74Jwa/view?usp=sharing" target="_blank" class="btn-cv">СКАЧАТИ CV (PDF)</a>
+      </div>
+    </nav>
+
+    <div class="actions desktop-only">
+      <div class="lang-switcher">
+        <button class="lang-btn active">UA</button>
+        <span class="divider">|</span>
+        <button class="lang-btn">EN</button>
+      </div>
+      <a href="https://drive.google.com/file/d/1mZ_JkRBVdnpXnmz2c5mp4gutyHi74Jwa/view?usp=sharing" target="_blank" class="btn-cv">CV (PDF)</a>
+    </div>
+  </div>
+</header>

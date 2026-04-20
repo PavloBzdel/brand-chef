@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // Додаємо фоновий колір для стабільності верстки
+    background-color: var(--bg-dark);
+
+    // Оновлений шлях: /assets/images/...
+    background: linear-gradient(to right, rgba(15, 17, 18, 0.9) 30%, rgba(15, 17, 18, 0.2) 100%),
+                url('/assets/images/hero-chef.jpg') center/cover no-repeat;
+
+    z-index: 1;
+
+    // Можна додати легкий зум-ефект при завантаженні (опційно)
+    animation: bgScale 10s infinite alternate linear;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    max-width: 800px;
+    animation: fadeInUp 1.2s ease-out;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: var(--accent-blue);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem); // Адаптивний розмір
+    line-height: 1.1;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+
+  &__cta-box {
+    background: rgba(0, 86, 130, 0.1);
+    border-left: 3px solid var(--accent-blue);
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+
+    .cta-text {
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+  }
+
+  // Скрол індикатор
+  &__scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+    opacity: 0.6;
+
+    span {
+      font-size: 0.6rem;
+      letter-spacing: 2px;
+    }
+
+    .mouse {
+      width: 20px;
+      height: 35px;
+      border: 2px solid var(--text-primary);
+      border-radius: 20px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px; left: 50%;
+        width: 4px; height: 4px;
+        background: var(--accent-blue);
+        border-radius: 50%;
+        transform: translateX(-50%);
+        animation: scrollAnim 2s infinite;
+      }
+    }
+  }
+}
+
+// Анімації
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollAnim {
+  0% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, 15px); }
+}
+
+// Адаптивність
+@media (max-width: 768px) {
+  .hero__title { font-size: 2.8rem; }
+  .hero__content { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .hero__bg { background: linear-gradient(to top, rgba(15, 17, 18, 1) 20%, rgba(15, 17, 18, 0.4) 100%), url('/assets/images/hero-chef.jpg') center/cover no-repeat; }
+}

@@ -1,0 +1,32 @@
+.contact__container{
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+.contact__email{
+  p{
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+}
+.contact__socials{
+  p{
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+  a{
+    margin-right: 10px;
+    img{
+      width: 30px;
+      height: 30px;
+        transition: transform 0.3s ease;
+    }
+    &:hover img{
+      transform: translateY(-5px);
+    }
+  }
+}
