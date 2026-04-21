@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 
 interface GalleryItem {
   src: string;
-  title: string;
-  category: string;
+
 }
 
 @Component({
@@ -18,12 +17,19 @@ interface GalleryItem {
 
 export class GalleryComponent implements OnInit, OnDestroy {
   galleryItems: GalleryItem[] = [
-    { src: 'assets/images/gallery-1.jpg', title: 'PASTA ARTISTRY', category: 'Борошно та тісто' },
-    { src: 'assets/images/gallery-8.jpg', title: 'MEAT & FIRE', category: 'Ферментація' },
-    { src: 'assets/images/gallery-3.jpg', title: 'SIGNATURE DISHES', category: 'Авторська подача' },
-    { src: 'assets/images/gallery-4.jpg', title: 'KITCHEN FLOW', category: 'Процеси' },
-    { src: 'assets/images/gallery-6.jpg', title: 'ITALIAN ROOTS', category: 'Римська школа' },
-    { src: 'assets/images/gallery-7.jpg', title: 'ITALIAN ROOTS', category: 'Римська школа' }
+    { src: 'assets/images/gallery-1.jpg'},
+    { src: 'assets/images/gallery-8.jpg'},
+    { src: 'assets/images/gallery-3.jpg'},
+    { src: 'assets/images/gallery-4.jpg'},
+    { src: 'assets/images/gallery-6.jpg'},
+    { src: 'assets/images/gallery-7.jpg'},
+    { src: 'assets/images/gallery-9.jpg'},
+    { src: 'assets/images/gallery-10.jpg'},
+    { src: 'assets/images/gallery-11.jpg'},
+    { src: 'assets/images/gallery-12.jpg'},
+    { src: 'assets/images/gallery-13.jpg'},
+    { src: 'assets/images/gallery-14.jpg'},
+    { src: 'assets/images/gallery-15.jpg'}
   ];
 
   currentIndex = 0;

@@ -14,10 +14,10 @@
         <div class="carousel__track" [style.transform]="'translateX(-' + (currentIndex * (100 / itemsVisible)) + '%)'">
           <div class="carousel__slide" *ngFor="let item of galleryItems">
             <div class="carousel__image-container">
-              <img [src]="item.src" [alt]="item.title">
+              <img [src]="item.src" alt="photo">
               <div class="carousel__caption">
-                <span class="category">{{ item.category }}</span>
-                <h3>{{ item.title }}</h3>
+
+
               </div>
             </div>
           </div>
