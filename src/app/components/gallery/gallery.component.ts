@@ -29,7 +29,14 @@ export class GalleryComponent implements OnInit, OnDestroy {
     { src: 'assets/images/gallery-12.jpg'},
     { src: 'assets/images/gallery-13.jpg'},
     { src: 'assets/images/gallery-14.jpg'},
-    { src: 'assets/images/gallery-15.jpg'}
+    { src: 'assets/images/gallery-15.jpg'},
+    { src: 'assets/images/gallery-16.JPG'},
+    { src: 'assets/images/gallery-17.JPG'},
+    { src: 'assets/images/gallery-18.JPG'},
+    { src: 'assets/images/gallery-19.JPG'},
+    { src: 'assets/images/gallery-20.jpg'},
+    { src: 'assets/images/gallery-21.jpg'},
+    { src: 'assets/images/gallery-22.jpg'},
   ];
 
   currentIndex = 0;
